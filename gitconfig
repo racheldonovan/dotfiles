@@ -2,7 +2,7 @@
 
 # DO NOT EDIT BELOW THIS LINE
 [push]
-  default = tracking
+  default = current
 [color]
   branch = auto
   diff = auto
