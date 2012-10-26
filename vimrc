@@ -98,3 +98,48 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
+" <Space> is the leader character
+let mapleader = " "
+
+" Edit the README (makes :R commands work)
+map <Leader>R :e README*<CR>
+
+" Open an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Open a tab edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" Insert the path of the currently edited file into a command
+" Command mode: Ctrl+P
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+" Map autocomplete to tab
+imap <Tab> <C-P>
+
+" Duplicate a selection
+" Visual mode: D
+vmap D y'>p
+
+" No Help, please
+nmap <F1> <Esc>
+
+" Press Shift+P while in visual mode to replace the selection without
+" overwriting the default register
+vmap P p :call setreg('"', getreg('0')) <CR>
+
+" Window navigation
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+
+" Snippets are activated by Shift+Tab
+let g:snippetsEmu_key = "<S-Tab>"
+
+" Start git commit messages in insert mode
+au FileType gitcommit execute "normal" "gg"
+au FileType gitcommit startinsert
+
+" Help keep lines within 80 columns
+set colorcolumn=80
