@@ -88,7 +88,6 @@ autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=rou
 " :Cuc my text (no quotes) -> runs cucumber scenarios containing "my text"
 command! -nargs=+ Cuc :!ack --no-heading --no-break <q-args> | cut -d':' -f1,2 | xargs bundle exec cucumber --no-color
 
-
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
