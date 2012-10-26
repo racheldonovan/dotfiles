@@ -142,3 +142,10 @@ au FileType gitcommit startinsert
 
 " Help keep lines within 80 columns
 set colorcolumn=80
+
+" Open the quickfix window after running grep
+autocmd QuickFixCmdPost *grep* cwindow
+
+" Search for the word under the cursor
+" Normal mode: K
+nmap K :grep "\b<C-R><C-W>\b"<CR>
