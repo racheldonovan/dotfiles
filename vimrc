@@ -49,6 +49,11 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
 endif
 
+" Use The Silver Searcher instead of Grep when available
+if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor\ --column
+endif
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
