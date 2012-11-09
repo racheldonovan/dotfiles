@@ -147,3 +147,6 @@ autocmd QuickFixCmdPost *grep* cwindow
 " Search for the word under the cursor
 " Normal mode: K
 nmap K :grep "\b<C-R><C-W>\b"<CR>
+
+" Replace double quotes with single quotes
+nmap <Leader>' :s/"/'/g<CR>
