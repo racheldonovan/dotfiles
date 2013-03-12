@@ -154,3 +154,11 @@ nmap <Leader>' :s/"/'/g<CR>
 " Markdown files end in .md
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.md set spell
+
+" Edit Routes
+command! Rroutes :Redit config/routes.rb
+command! RTroutes :RTedit config/routes.rb
+
+" Edit factories
+command! Rfactories :Redit spec/factories.rb
+command! RTfactories :RTedit spec/factories.rb
